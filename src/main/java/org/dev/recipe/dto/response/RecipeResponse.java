@@ -25,6 +25,10 @@ public class RecipeResponse {
     @Builder.Default
     private String status = "success";
 
+    @Builder.Default
+    private  String error = "";
+
+
     // Optional metadata
     private NutritionInfo nutritionInfo;
 
@@ -37,5 +41,6 @@ public class RecipeResponse {
         private Integer protein;
         private Integer carbs;
         private Integer fat;
+
     }
 }

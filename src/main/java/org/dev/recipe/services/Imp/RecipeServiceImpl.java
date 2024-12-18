@@ -9,8 +9,9 @@ import org.dev.recipe.services.RecipeService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Slf4j
 @Service
@@ -21,91 +22,133 @@ public class RecipeServiceImpl implements RecipeService {
 
     @Override
     public RecipeResponse generateRecipe(RecipeRequest request) {
-        // Create a more structured prompt for the AI
-        String prompt = String.format(
-                "You are a professional chef. Please create a detailed and well-structured recipe based on the following ingredients: %s.\n\n" +
-                        "### Recipe Requirements:\n" +
-                        "1. Provide a **Title** for the recipe.\n" +
-                        "2. Specify the **Cooking Time** in minutes or hours.\n" +
-                        "3. List the **Ingredients**, with each ingredient on a new line.\n" +
-                        "4. Write the **Instructions** step-by-step, numbered sequentially.\n" +
-                        "5. Ensure the recipe is easy to follow and suitable for home cooking.\n\n" +
-                        "### Formatting Example:\n" +
-                        "TITLE: [Recipe Name]\n" +
-                        "COOKING TIME: [Time]\n" +
-                        "INGREDIENTS:\n" +
-                        "- [Ingredient 1]\n" +
-                        "- [Ingredient 2]\n" +
-                        "- [Ingredient 3]\n" +
-                        "INSTRUCTIONS:\n" +
-                        "1. [Step 1]\n" +
-                        "2. [Step 2]\n" +
-                        "3. [Step 3]\n\n" +
-                        "Focus on clarity, accuracy, and creativity while generating the recipe.",
-                request.getIngredients()
-        );
+        try {
+            String prompt = buildPrompt(request);
+            String aiResponse = geminiAIService.generateContent(prompt);
+            log.info("AI Response received for ingredients: {}", request.getIngredients());
 
+            return parseRecipe(aiResponse, request);
+        } catch (Exception e) {
+            log.error("Error generating recipe: ", e);
+            return RecipeResponse.builder()
+                    .status("error")
+                    .error("Failed to generate recipe: " + e.getMessage())
+                    .build();
+        }
+    }
 
-        String aiResponse = geminiAIService.generateContent(prompt);
-        log.info("AI Response: {}", aiResponse); // Add logging to see the response
+    private String buildPrompt(RecipeRequest request) {
+        StringBuilder prompt = new StringBuilder();
+        prompt.append("As a professional chef, create a detailed recipe using these ingredients: ")
+                .append(request.getIngredients())
+                .append("\n\n");
 
-        return parseRecipe(aiResponse, request);
+        // Add cuisine preference if specified
+        if (!"any".equalsIgnoreCase(request.getCuisine())) {
+            prompt.append("Cuisine style: ").append(request.getCuisine()).append("\n");
+        }
+
+        // Add difficulty level context
+        prompt.append("Difficulty level: ").append(request.getDifficulty()).append("\n");
+        prompt.append("Number of servings: ").append(request.getServings()).append("\n\n");
+
+        // Recipe structure requirements
+        prompt.append("Please provide the recipe in this exact format:\n\n")
+                .append("TITLE: [Creative and descriptive name for the dish]\n\n")
+                .append("COOKING TIME: [Total preparation and cooking time]\n\n")
+                .append("INGREDIENTS:\n")
+                .append("- [Precise quantity] [Ingredient 1]\n")
+                .append("- [Precise quantity] [Ingredient 2]\n")
+                .append("(Continue for all ingredients)\n\n")
+                .append("INSTRUCTIONS:\n")
+                .append("1. [Clear, detailed first step]\n")
+                .append("2. [Clear, detailed second step]\n")
+                .append("(Continue with all steps)\n\n")
+                .append("Ensure all measurements are precise and instructions are clear for home cooking.");
+
+        return prompt.toString();
     }
 
     private RecipeResponse parseRecipe(String content, RecipeRequest request) {
-        String[] sections = content.split("\n");
+        try {
+            String[] sections = content.split("\n");
 
-        String title = "";
-        String cookingTime = "";
-        List<String> ingredients = new ArrayList<>();
-        List<String> instructions = new ArrayList<>();
+            String title = "";
+            String cookingTime = "";
+            List<String> ingredients = new ArrayList<>();
+            List<String> instructions = new ArrayList<>();
 
-        boolean inIngredients = false;
-        boolean inInstructions = false;
+            boolean inIngredients = false;
+            boolean inInstructions = false;
 
-        for (String line : sections) {
-            String trimmedLine = line.trim();
+            for (String line : sections) {
+                String trimmedLine = line.trim();
 
-            if (trimmedLine.isEmpty()) continue;
+                if (trimmedLine.isEmpty()) continue;
 
-            if (trimmedLine.toUpperCase().startsWith("TITLE:")) {
-                title = trimmedLine.substring(6).trim();
+                // Parse title
+                if (trimmedLine.toUpperCase().startsWith("TITLE:")) {
+                    title = extractContent(trimmedLine, "TITLE:");
+                    continue;
+                }
+
+                // Parse cooking time
+                if (trimmedLine.toUpperCase().startsWith("COOKING TIME:")) {
+                    cookingTime = extractContent(trimmedLine, "COOKING TIME:");
+                    continue;
+                }
+
+                // Handle ingredients section
+                if (trimmedLine.toUpperCase().equals("INGREDIENTS:")) {
+                    inIngredients = true;
+                    inInstructions = false;
+                    continue;
+                }
+
+                // Handle instructions section
+                if (trimmedLine.toUpperCase().equals("INSTRUCTIONS:")) {
+                    inInstructions = true;
+                    inIngredients = false;
+                    continue;
+                }
+
+                // Add ingredients
+                if (inIngredients && trimmedLine.startsWith("-")) {
+                    ingredients.add(trimmedLine.substring(1).trim());
+                    continue;
+                }
+
+                // Add instructions
+                if (inInstructions && Character.isDigit(trimmedLine.charAt(0))) {
+                    String instruction = trimmedLine.replaceFirst("^\\d+\\.\\s*", "");
+                    instructions.add(instruction);
+                }
             }
-            else if (trimmedLine.toUpperCase().startsWith("COOKING TIME:")) {
-                cookingTime = trimmedLine.substring(12).trim();
-            }
-            else if (trimmedLine.toUpperCase().startsWith("INGREDIENTS:")) {
-                inIngredients = true;
-                inInstructions = false;
-                continue;
-            }
-            else if (trimmedLine.toUpperCase().startsWith("INSTRUCTIONS:")) {
-                inInstructions = true;
-                inIngredients = false;
-                continue;
-            }
 
-            if (inIngredients && !trimmedLine.toUpperCase().contains("INSTRUCTIONS:")) {
-                ingredients.add(trimmedLine);
-            }
+            log.info("Successfully parsed recipe - Title: {}, Ingredients: {}, Instructions: {}",
+                    title, ingredients.size(), instructions.size());
 
-            if (inInstructions) {
-                instructions.add(trimmedLine);
-            }
+            return RecipeResponse.builder()
+                    .title(title)
+                    .cookingTime(cookingTime)
+                    .ingredients(ingredients)
+                    .instructions(instructions)
+                    .difficulty(request.getDifficulty())
+                    .servings(request.getServings())
+                    .cuisine(request.getCuisine())
+                    .status("success")
+                    .build();
+
+        } catch (Exception e) {
+            log.error("Error parsing recipe: ", e);
+            return RecipeResponse.builder()
+                    .status("error")
+                    .error("Failed to parse recipe: " + e.getMessage())
+                    .build();
         }
+    }
 
-        log.info("Parsed Recipe - Title: {}, Ingredients: {}, Instructions: {}",
-                title, ingredients.size(), instructions.size());
-
-        return RecipeResponse.builder()
-                .title(title)
-                .ingredients(ingredients)
-                .instructions(instructions)
-                .cookingTime(cookingTime)
-                .difficulty(request.getDifficulty())
-                .servings(request.getServings())
-                .cuisine(request.getCuisine())
-                .status("success")
-                .build();
+    private String extractContent(String line, String prefix) {
+        return line.substring(prefix.length()).trim();
     }
 }

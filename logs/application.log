@@ -104,3 +104,320 @@ INSTRUCTIONS:
 7. Top with fresh basil and Parmesan cheese, if desired.
 8. Serve immediately and enjoy!
 2024-12-15 13:50:15 INFO  o.d.r.services.Imp.RecipeServiceImpl - Parsed Recipe - Title: Roasted Tomato Bruschetta, Ingredients: 8, Instructions: 8
+2024-12-16 22:05:41 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-16 22:05:41 INFO  org.dev.recipe.RecipeApplication - Starting RecipeApplication using Java 21.0.5 with PID 3484 (A:\MQL-M2-2024\project-gemini\latest-app\recipe\target\classes started by ayoub in A:\MQL-M2-2024\project-gemini\latest-app\recipe)
+2024-12-16 22:05:41 INFO  org.dev.recipe.RecipeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-16 22:05:42 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-16 22:05:42 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-16 22:05:42 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-16 22:05:42 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-12-16 22:05:42 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-16 22:05:42 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1039 ms
+2024-12-16 22:05:42 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-16 22:05:42 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-12-16 22:05:42 INFO  org.dev.recipe.RecipeApplication - Started RecipeApplication in 2.172 seconds (process running for 3.099)
+2024-12-18 19:24:12 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-18 19:24:12 INFO  org.dev.recipe.RecipeApplication - Starting RecipeApplication using Java 21.0.5 with PID 22248 (A:\MQL-M2-2024\project-gemini\latest-app\recipe\target\classes started by ayoub in A:\MQL-M2-2024\project-gemini\latest-app\recipe)
+2024-12-18 19:24:12 INFO  org.dev.recipe.RecipeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-18 19:24:13 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-18 19:24:13 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-18 19:24:13 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-18 19:24:13 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-12-18 19:24:13 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-18 19:24:13 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1064 ms
+2024-12-18 19:24:14 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-18 19:24:14 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-12-18 19:24:14 INFO  org.dev.recipe.RecipeApplication - Started RecipeApplication in 2.075 seconds (process running for 4.891)
+2024-12-18 20:18:11 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-18 20:18:11 INFO  org.dev.recipe.RecipeApplication - Starting RecipeApplication using Java 21.0.5 with PID 4560 (A:\MQL-M2-2024\project-gemini\latest-app\recipe\target\classes started by ayoub in A:\MQL-M2-2024\project-gemini\latest-app\recipe)
+2024-12-18 20:18:11 INFO  org.dev.recipe.RecipeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-18 20:18:12 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-18 20:18:12 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-18 20:18:12 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-18 20:18:12 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-12-18 20:18:12 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-18 20:18:12 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 651 ms
+2024-12-18 20:18:12 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-18 20:18:12 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-12-18 20:18:12 INFO  org.dev.recipe.RecipeApplication - Started RecipeApplication in 1.382 seconds (process running for 1.973)
+2024-12-18 20:22:10 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-18 20:22:10 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-18 20:22:10 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-18 20:22:15 INFO  o.d.r.services.Imp.RecipeServiceImpl - AI Response: **TITLE: Bruschetta with Roasted Tomatoes**
+**COOKING TIME:** 30 minutes
+
+**INGREDIENTS:**
+- 1 pound Roma tomatoes, halved lengthwise
+- 1/4 cup olive oil
+- 1/4 teaspoon dried oregano
+- 1/4 teaspoon dried basil
+- 1/4 teaspoon salt
+- 1/4 teaspoon black pepper
+- 1 baguette, sliced into 1-inch thick pieces
+- 3 cloves garlic, minced
+- 1/4 cup chopped fresh parsley
+
+**INSTRUCTIONS:**
+
+1. Preheat oven to 400 degrees F (200 degrees C).
+2. In a large bowl, combine the tomatoes, olive oil, oregano, basil, salt, and pepper. Toss to coat.
+3. Spread the tomatoes on a rimmed baking sheet and roast for 20-25 minutes, or until softened and slightly browned.
+4. Meanwhile, toast the baguette slices until golden brown.
+5. Rub the toasted baguette slices with the garlic.
+6. Top the baguette slices with the roasted tomatoes and sprinkle with the parsley.
+7. Serve immediately.
+2024-12-18 20:22:15 INFO  o.d.r.services.Imp.RecipeServiceImpl - Parsed Recipe - Title: , Ingredients: 0, Instructions: 0
+2024-12-18 20:24:53 INFO  o.d.r.services.Imp.RecipeServiceImpl - AI Response: TITLE: Tuscan Roasted Tomatoes
+COOKING TIME: 90 minutes
+
+INGREDIENTS:
+- 2 pounds ripe tomatoes, cut into 1/2-inch slices
+- 1/4 cup olive oil
+- 2 tablespoons balsamic vinegar
+- 1 tablespoon dried oregano
+- 1 teaspoon dried thyme
+- 1 teaspoon salt
+- 1/2 teaspoon black pepper
+
+INSTRUCTIONS:
+1. Preheat oven to 250°F (120°C).
+2. Place tomatoes in a single layer on a large baking sheet. Drizzle with olive oil and balsamic vinegar. Season with oregano, thyme, salt, and pepper.
+3. Roast in the preheated oven for 1 hour, or until tomatoes are slightly browned and shriveled.
+4. Remove from oven and let cool before using.
+5. Serve roasted tomatoes in salads, sandwiches, or as a side dish.
+2024-12-18 20:24:53 INFO  o.d.r.services.Imp.RecipeServiceImpl - Parsed Recipe - Title: Tuscan Roasted Tomatoes, Ingredients: 7, Instructions: 5
+2024-12-18 20:26:05 INFO  o.d.r.services.Imp.RecipeServiceImpl - AI Response: TITLE: Roasted Tomato Bruschetta
+COOKING TIME: 45 minutes
+
+INGREDIENTS:
+- 1 pound Roma tomatoes, cut into 1/2-inch cubes
+- 1/4 cup olive oil
+- 1 tablespoon dried oregano
+- 1 tablespoon salt
+- 1/2 teaspoon black pepper
+- 1 baguette, sliced into 1-inch thick rounds
+- 2 cloves garlic, minced
+- 1/4 cup chopped fresh basil
+
+INSTRUCTIONS:
+1. Preheat oven to 400°F (200°C).
+2. In a large bowl, combine tomatoes, olive oil, oregano, salt, and pepper. Toss to coat.
+3. Spread tomatoes on a baking sheet and roast in the oven for 30 minutes, or until softened and slightly caramelized.
+4. Meanwhile, toast baguette slices in the oven until golden brown.
+5. Rub toasted baguette slices with garlic cloves.
+6. Top each baguette slice with roasted tomatoes and sprinkle with basil.
+7. Serve immediately.
+2024-12-18 20:26:05 INFO  o.d.r.services.Imp.RecipeServiceImpl - Parsed Recipe - Title: Roasted Tomato Bruschetta, Ingredients: 8, Instructions: 7
+2024-12-18 20:41:10 INFO  o.d.r.services.Imp.RecipeServiceImpl - AI Response: **TITLE: Savory Tomato Tart**
+**COOKING TIME:** 45 minutes
+
+**INGREDIENTS:**
+
+- 1 (15-ounce) can of diced tomatoes, undrained
+- 1 (9-inch) unbaked pie crust
+- 1/2 cup grated Parmesan cheese
+- 1/4 cup chopped fresh basil
+- 1/4 cup grated mozzarella cheese
+- 1/4 cup chopped fresh parsley
+- 1/4 teaspoon salt
+- 1/4 teaspoon black pepper
+- 1 tablespoon olive oil
+
+**INSTRUCTIONS:**
+
+1. Preheat oven to 375 degrees F (190 degrees C).
+2. Press the tomatoes into a colander to drain off excess liquid.
+3. In a large bowl, combine the tomatoes, Parmesan cheese, basil, mozzarella cheese, parsley, salt, and black pepper.
+4. Pour the tomato mixture into the unbaked pie crust.
+5. Drizzle the olive oil evenly over the top.
+6. Bake in the preheated oven for 30-35 minutes, or until the crust is golden brown and the center is set.
+7. Let cool for a few minutes before slicing and serving.
+2024-12-18 20:41:10 INFO  o.d.r.services.Imp.RecipeServiceImpl - Parsed Recipe - Title: , Ingredients: 0, Instructions: 0
+2024-12-18 22:17:10 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-18 22:17:10 INFO  org.dev.recipe.RecipeApplication - Starting RecipeApplication using Java 21.0.5 with PID 19076 (A:\MQL-M2-2024\project-gemini\latest-app\recipe\target\classes started by ayoub in A:\MQL-M2-2024\project-gemini\latest-app\recipe)
+2024-12-18 22:17:10 INFO  org.dev.recipe.RecipeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-18 22:17:10 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-18 22:17:10 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-18 22:17:10 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-18 22:17:10 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-12-18 22:17:10 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-18 22:17:10 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 689 ms
+2024-12-18 22:17:11 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-18 22:17:11 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-12-18 22:17:11 INFO  org.dev.recipe.RecipeApplication - Started RecipeApplication in 1.49 seconds (process running for 2.214)
+2024-12-18 22:48:52 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-18 22:48:52 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-18 22:48:52 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-18 22:48:58 INFO  o.d.r.services.Imp.RecipeServiceImpl - AI Response: **TITLE: Roasted Tomato Soup**
+
+**COOKING TIME:** 1 hour 15 minutes
+
+**INGREDIENTS:**
+
+- 3 pounds tomatoes, cut into 1-inch chunks
+- 2 tablespoons olive oil
+- 1 onion, chopped
+- 2 cloves garlic, minced
+- 4 cups vegetable broth
+- 1/2 cup heavy cream
+- 1/4 cup grated Parmesan cheese
+- Salt and pepper to taste
+- Garnish: fresh basil leaves
+
+**INSTRUCTIONS:**
+
+1. **Preheat oven:** Preheat the oven to 400°F (200°C).
+2. **Roast tomatoes:** In a large bowl, toss the tomato chunks with olive oil, salt, and pepper. Spread on a baking sheet and roast in the preheated oven for 45-50 minutes, or until they are softened and slightly browned.
+3. **Sauté onion and garlic:** While the tomatoes are roasting, heat a large pot over medium heat. Add the onion and sauté until softened, about 5 minutes. Add the garlic and cook for another 1 minute, until fragrant.
+4. **Combine ingredients:** Transfer the roasted tomatoes to the pot with the onion and garlic. Add the vegetable broth and bring to a simmer.
+5. **Simmer:** Reduce heat to low and simmer for 30-45 minutes, or until the soup has thickened and the tomatoes have dissolved.
+6. **Puree soup:** Use a hand blender or transfer the soup to a blender and puree until smooth.
+7. **Enrich soup:** Stir in the heavy cream and Parmesan cheese. Season with additional salt and pepper to taste.
+8. **Garnish and serve:** Garnish with fresh basil leaves and serve hot with crusty bread or a side salad.
+2024-12-18 22:48:58 INFO  o.d.r.services.Imp.RecipeServiceImpl - Parsed Recipe - Title: , Ingredients: 0, Instructions: 0
+2024-12-18 22:51:37 INFO  o.d.r.services.Imp.RecipeServiceImpl - AI Response: **TITLE:** Caprese Salad
+
+**COOKING TIME:** 15 minutes
+
+**INGREDIENTS:**
+- 1 pound vine-ripened tomatoes, sliced
+- 1 ball fresh mozzarella, sliced
+- 1/2 cup fresh basil leaves, washed and dried
+- 1/4 cup extra virgin olive oil
+- 1/4 cup balsamic vinegar
+- Salt and pepper, to taste
+
+**INSTRUCTIONS:**
+1. Arrange the tomato slices and mozzarella slices on a serving platter or individual plates.
+2. Sprinkle the basil leaves evenly over the tomatoes and mozzarella.
+3. Drizzle the olive oil and balsamic vinegar over the salad.
+4. Season with salt and pepper to taste.
+5. Serve immediately.
+2024-12-18 22:51:37 INFO  o.d.r.services.Imp.RecipeServiceImpl - Parsed Recipe - Title: , Ingredients: 0, Instructions: 0
+2024-12-18 22:59:25 INFO  o.d.r.services.Imp.RecipeServiceImpl - AI Response: **TITLE: Roasted Cherry Tomato Bruschetta**
+
+**COOKING TIME:** 45 minutes
+
+**INGREDIENTS:**
+
+- 1 pint cherry tomatoes, halved
+- 1 tablespoon olive oil
+- 1 teaspoon dried oregano
+- 1/2 teaspoon salt
+- 1/4 teaspoon black pepper
+- 1 baguette, cut into 1-inch slices
+- 1 clove garlic, minced
+- 1/4 cup fresh basil leaves, chopped (for garnish)
+
+**INSTRUCTIONS:**
+
+1. Preheat oven to 425°F (220°C).
+2. In a large bowl, combine tomatoes, olive oil, oregano, salt, and pepper. Toss to coat.
+3. Spread tomatoes on a baking sheet and roast for 20-25 minutes, or until softened and caramelized.
+4. Meanwhile, toast baguette slices in a toaster or under a broiler until golden brown.
+5. Rub garlic on toasted baguette slices.
+6. Top baguette slices with roasted tomatoes.
+7. Garnish with fresh basil leaves and serve immediately.
+2024-12-18 22:59:25 INFO  o.d.r.services.Imp.RecipeServiceImpl - Parsed Recipe - Title: , Ingredients: 0, Instructions: 0
+2024-12-18 23:03:56 INFO  o.d.r.services.Imp.RecipeServiceImpl - AI Response: **Title: Bruschetta with Fresh Tomatoes**
+
+**Cooking Time:** 20 minutes
+
+**Ingredients:**
+
+- 1 loaf French bread, cut into 1-inch thick slices
+- 2 medium tomatoes, diced
+- 1/2 cup chopped red onion
+- 1/4 cup chopped fresh parsley
+- 1/4 cup olive oil
+- 1 tablespoon balsamic vinegar
+- 1 teaspoon dried oregano
+- 1/4 teaspoon salt
+- 1/4 teaspoon black pepper
+- Fresh basil, for garnish (optional)
+
+**Instructions:**
+
+1. Preheat oven to 400°F (200°C).
+2. Brush bread slices with olive oil and toast in the oven for 5-7 minutes per side, or until golden brown.
+3. In a medium bowl, combine diced tomatoes, red onion, parsley, oregano, salt, and pepper. Mix well.
+4. Drizzle balsamic vinegar over the tomato mixture and stir to coat.
+5. Spread the tomato mixture evenly over the toasted bread slices.
+6. Garnish with fresh basil leaves, if desired.
+7. Serve immediately.
+
+**Tips:**
+
+* For a richer flavor, use ripe, flavorful tomatoes.
+* If you don't have time to toast the bread in the oven, you can grill it or pan-fry it instead.
+* Add other toppings to your bruschetta, such as mozzarella cheese, prosciutto, or arugula.
+2024-12-18 23:03:56 INFO  o.d.r.services.Imp.RecipeServiceImpl - Parsed Recipe - Title: , Ingredients: 0, Instructions: 0
+2024-12-18 23:04:38 INFO  o.d.r.services.Imp.RecipeServiceImpl - AI Response: **Title:** Tomato Caprese Skewers
+
+**Cooking Time:** 20 minutes
+
+**Ingredients:**
+- 24 cherry tomatoes
+- 12 fresh basil leaves
+- 12 mozzarella balls (pearl-sized)
+- 1/2 cup olive oil
+- 1/4 cup balsamic glaze
+- Salt and pepper to taste
+
+**Instructions:**
+
+1. **Prepare the Skewers:** Thread a cherry tomato, a basil leaf, and a mozzarella ball onto each skewer. Repeat until all ingredients are used.
+2. **Marinade the Skewers:** In a shallow dish, whisk together the olive oil, balsamic glaze, salt, and pepper. Place the skewers in the marinade and refrigerator for at least 15 minutes.
+3. **Grill or Pan-Fry:** Heat a grill or grill pan over medium heat. Grill the skewers for 5-7 minutes per side, or until the tomatoes start to blister and the cheese is melted.
+4. **Serve:** Transfer the skewers to a serving platter and drizzle with any remaining marinade. Serve immediately.
+
+**Tips:**
+
+- Use a variety of colored cherry tomatoes for a more visually appealing dish.
+- Season the skewers with your favorite herbs and spices, such as oregano, thyme, or rosemary.
+- Serve with a side of crusty bread or focaccia for dipping.
+- For a vegetarian version, replace the mozzarella with bocconcini or fresh paneer.
+2024-12-18 23:04:38 INFO  o.d.r.services.Imp.RecipeServiceImpl - Parsed Recipe - Title: , Ingredients: 0, Instructions: 0
+2024-12-18 23:06:08 INFO  o.d.r.services.Imp.RecipeServiceImpl - AI Response: **TITLE:** Tomato Confit
+
+**COOKING TIME:** 2 hours
+
+**INGREDIENTS:**
+- 2 pounds Roma tomatoes, halved lengthwise
+- 1/2 cup olive oil
+- 1/4 cup sugar
+- 1/4 cup balsamic vinegar
+- 1 tablespoon dried oregano
+- 1 teaspoon salt
+- 1/2 teaspoon black pepper
+
+**INSTRUCTIONS:**
+1. Preheat oven to 250 degrees F (120 degrees C).
+2. Place the tomatoes cut-side up on a baking sheet lined with parchment paper.
+3. In a small bowl, whisk together the olive oil, sugar, balsamic vinegar, oregano, salt, and pepper.
+4. Drizzle the tomatoes with the marinade.
+5. Roast for 2 hours, or until the tomatoes are soft and caramelized.
+6. Remove from the oven and let cool slightly before serving.
+
+**SERVING SUGGESTIONS:**
+- Spread the tomato confit on toasted bread or crackers.
+- Use as a topping for pizza or pasta.
+- Add to salads or sandwiches.
+2024-12-18 23:06:08 INFO  o.d.r.services.Imp.RecipeServiceImpl - Parsed Recipe - Title: , Ingredients: 0, Instructions: 0
+2024-12-19 00:31:34 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-12-19 00:31:34 INFO  org.dev.recipe.RecipeApplication - Starting RecipeApplication using Java 21.0.5 with PID 23772 (A:\MQL-M2-2024\project-gemini\latest-app\recipe\target\classes started by ayoub in A:\MQL-M2-2024\project-gemini\latest-app\recipe)
+2024-12-19 00:31:34 INFO  org.dev.recipe.RecipeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-19 00:31:35 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-19 00:31:35 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-19 00:31:35 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-19 00:31:35 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-12-19 00:31:35 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-19 00:31:35 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 968 ms
+2024-12-19 00:31:35 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-19 00:31:35 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-12-19 00:31:35 INFO  org.dev.recipe.RecipeApplication - Started RecipeApplication in 1.954 seconds (process running for 2.758)
+2024-12-19 00:31:53 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-19 00:31:53 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-19 00:31:53 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-12-19 00:32:03 INFO  o.d.r.services.Imp.RecipeServiceImpl - AI Response received for ingredients: tomates
+2024-12-19 00:32:03 INFO  o.d.r.services.Imp.RecipeServiceImpl - Successfully parsed recipe - Title: Rustic Tomato and Herb Tart, Ingredients: 7, Instructions: 7
