@@ -10,7 +10,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-                .allowedOrigins("*") // Allow all origins
+                .allowedOrigins("*","https://tastyai.netlify.app") // Allow all origins
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Allow all these HTTP methods
                 .allowedHeaders("*") // Allow all headers
                 .allowCredentials(false) // Credentials shouldn't be used with "*" as origin
