@@ -727,3 +727,39 @@ org.dev.recipe.exception.MistralAIException: Network error while calling Mistral
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 2025-01-18 00:13:06 ERROR o.d.r.controller.RecipeController - Error generating recipe: Failed to generate recipe: Network error while calling Mistral AI: I/O error on POST request for "https://api.mistral.ai/v1/chat/completions": Read timed out
+2025-01-22 16:43:59 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-01-22 16:43:59 INFO  org.dev.recipe.RecipeApplication - Starting RecipeApplication using Java 21.0.5 with PID 7872 (A:\MQL-M2-2024\project-gemini\latest-app\recipe\target\classes started by ayoub in A:\MQL-M2-2024\project-gemini\latest-app\recipe)
+2025-01-22 16:43:59 INFO  org.dev.recipe.RecipeApplication - The following 1 profile is active: "mistral"
+2025-01-22 16:44:00 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-22 16:44:00 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2025-01-22 16:44:01 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-01-22 16:44:01 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-01-22 16:44:01 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 16:44:01 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-01-22 16:44:01 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 16:44:01 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1597 ms
+2025-01-22 16:44:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-01-22 16:44:01 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:4960bdda-0ea7-4d00-9f95-b6ed3ae3213a user=SA
+2025-01-22 16:44:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-01-22 16:44:01 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-22 16:44:01 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-01-22 16:44:02 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-01-22 16:44:02 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-22 16:44:02 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-22 16:44:02 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-22 16:44:02 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-22 16:44:03 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-01-22 16:44:03 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2025-01-22 16:44:03 INFO  org.dev.recipe.RecipeApplication - Started RecipeApplication in 3.981 seconds (process running for 6.42)
+2025-01-22 16:45:07 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-22 16:45:07 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-22 16:45:07 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-01-22 16:45:08 INFO  o.d.r.controller.RecipeController - Received recipe generation request for ingredients: tomates
+2025-01-22 16:45:08 INFO  o.d.r.s.Imp.MistralAIServiceImpl - Sending request to Mistral AI
+2025-01-22 16:45:17 INFO  o.d.r.s.Imp.MistralAIServiceImpl - Received response from Mistral AI
+2025-01-22 16:45:17 INFO  o.d.r.services.Imp.RecipeServiceImpl - AI Response received for ingredients: tomates
+2025-01-22 16:45:17 INFO  o.d.r.services.Imp.RecipeServiceImpl - Successfully parsed recipe - Title: Moroccan Spiced Tomato Salad with Fresh Mint, Ingredients: 10, Instructions: 11
+2025-01-22 16:45:17 INFO  o.d.r.controller.RecipeController - Successfully generated recipe: Moroccan Spiced Tomato Salad with Fresh Mint
+2025-01-22 16:55:53 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-22 16:55:53 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-01-22 16:55:53 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
