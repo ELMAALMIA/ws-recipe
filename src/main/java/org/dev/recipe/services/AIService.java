@@ -1,5 +1,5 @@
 package org.dev.recipe.services;
 
-public interface GeminiAIService {
+public interface AIService {
     String generateContent(String prompt);
 }

@@ -4,27 +4,26 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.dev.recipe.dto.request.RecipeRequest;
 import org.dev.recipe.dto.response.RecipeResponse;
-import org.dev.recipe.services.GeminiAIService;
+import org.dev.recipe.services.AIService;
 import org.dev.recipe.services.RecipeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
 public class RecipeServiceImpl implements RecipeService {
 
-    private final GeminiAIService geminiAIService;
+    private final AIService aiService;
 
     @Override
     public RecipeResponse generateRecipe(RecipeRequest request) {
         try {
             String prompt = buildPrompt(request);
-            String aiResponse = geminiAIService.generateContent(prompt);
+            String aiResponse = aiService.generateContent(prompt);
             log.info("AI Response received for ingredients: {}", request.getIngredients());
 
             return parseRecipe(aiResponse, request);

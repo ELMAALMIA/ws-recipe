@@ -3,8 +3,9 @@ package org.dev.recipe.services.Imp;
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.RequiredArgsConstructor;
 import org.dev.recipe.exception.GeminiAIException;
-import org.dev.recipe.services.GeminiAIService;
+import org.dev.recipe.services.AIService;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -16,8 +17,9 @@ import java.util.List;
 import java.util.Map;
 
 @Service
+@Profile("gemini")
 @RequiredArgsConstructor
-public class GeminiAIServiceImpl implements GeminiAIService {
+public class GeminiAIServiceImpl implements AIService {
 
     private final RestTemplate restTemplate;
 
