@@ -29,7 +29,7 @@ public class RecipeResponse {
     private  String error = "";
 
 
-    // Optional metadata
+
     private NutritionInfo nutritionInfo;
 
     @Data
