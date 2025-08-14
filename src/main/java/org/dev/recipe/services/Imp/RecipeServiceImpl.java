@@ -14,10 +14,14 @@ import java.util.List;
 
 @Slf4j
 @Service
-@RequiredArgsConstructor
+
 public class RecipeServiceImpl implements RecipeService {
 
     private final AIService aiService;
+
+    public RecipeServiceImpl(AIService aiService) {
+        this.aiService = aiService;
+    }
 
     @Override
     public RecipeResponse generateRecipe(RecipeRequest request) {

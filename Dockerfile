@@ -1,11 +1,24 @@
-# Use the Eclipse Temurin JDK 17 Alpine image as the base image
-FROM eclipse-temurin:17-jdk-alpine
+FROM openjdk:17-jdk-slim
 
-# Create a temporary directory for the application
-VOLUME /tmp
+WORKDIR /app
 
-# Copy the JAR file from the target directory to the root of the image
-COPY target/recipe-generator-0.0.1-SNAPSHOT.jar /ascii-art-generator.jar
+# Copy Maven wrapper and pom.xml
+COPY mvnw .
+COPY .mvn .mvn
+COPY pom.xml .
 
-# Define the command to run the application
-ENTRYPOINT ["java", "-jar", "/ascii-art-generator.jar"]
+# Download dependencies
+RUN ./mvnw dependency:go-offline
+
+# Copy source code
+COPY src src
+
+# Build application
+RUN ./mvnw clean package -DskipTests
+
+EXPOSE 8080
+
+# Use the PORT environment variable that Vercel provides
+ENV PORT=8080
+
+CMD ["java", "-Dserver.port=${PORT}", "-jar", "target/*.jar"]

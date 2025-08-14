@@ -18,8 +18,9 @@ import java.util.Map;
 
 @Service
 @Profile("gemini")
-@RequiredArgsConstructor
+
 public class GeminiAIServiceImpl implements AIService {
+
 
     private final RestTemplate restTemplate;
 
@@ -28,6 +29,10 @@ public class GeminiAIServiceImpl implements AIService {
 
     @Value("${gemini.api.url}")
     private String apiUrl;
+
+    public GeminiAIServiceImpl(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
 
     @Override
     public String generateContent(String prompt) {
